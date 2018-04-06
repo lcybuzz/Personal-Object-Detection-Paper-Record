@@ -7,7 +7,7 @@
 - [Taditional Classical Methods](#traditional-classical-methods)
 - [Datasets](#datasets)
 - [Leaderboards](#leaderboards)
-- [sources & lists](#sources-lists)
+- [Sources-Lists](#sources-lists)
 
 # Deep Learning Methods
 ## Popular methods
@@ -56,6 +56,6 @@
 # Leaderboards
  PASCAL VOC http://host.robots.ox.ac.uk:8080/leaderboard/main_bootstrap.php <Br>
   ILSVRC2016 http://image-net.org/challenges/LSVRC/2016/results <Br>
-# sources & lists
+# Sources-Lists
 https://handong1587.github.io/deep_learning/2015/10/09/object-detection.html <Br>
 
