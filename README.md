@@ -62,7 +62,7 @@
 ### **SSD**
 **[Paper]** SSD: Single Shot MultiBox Detector  <Br>
 **[Year]** ECCV 2016 Oral <Br>
-**[Authors]**   	[Wei Liu](http://www.cs.unc.edu/~wliu/), [Dragomir Anguelov](), [Christian Szegedy](https://research.google.com/pubs/ChristianSzegedy.html), [Scott Reed](http://www.scottreed.info/), [Cheng-Yang Fu](http://www.cs.unc.edu/~cyfu/), [Alexander C. Berg](http://acberg.com/). <Br>
+**[Authors]**   	[Wei Liu](http://www.cs.unc.edu/~wliu/), Dragomir Anguelov, [Christian Szegedy](https://research.google.com/pubs/ChristianSzegedy.html), [Scott Reed](http://www.scottreed.info/), [Cheng-Yang Fu](http://www.cs.unc.edu/~cyfu/), [Alexander C. Berg](http://acberg.com/). <Br>
 **[Pages]** <Br>
 	https://github.com/weiliu89/caffe/tree/ssd  <Br>
 	https://github.com/balancap/SSD-Tensorflow  <Br>
