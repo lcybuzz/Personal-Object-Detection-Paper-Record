@@ -59,7 +59,7 @@
 2) 将图像分为S*S个gird, 其作用类似于region proposal. 首先, 对于每个grid计算B个bounding box, 得到x, y, h, w以及confidence score, 此处confidence score是由bbox与真值的IoU和该grid存在目标的可能性之积组成的. 其次, 计算grid属于每个类别的概率, 通过bbox置信度类别概率相乘可得到bbox属于某一类的可能性;
 3) loss设计: 位置loss(只考虑负责该目标的bbox), 置信度loss(负责目标的bbox和不包含目标的bbox的加权和), 分类 loss(只考虑出现了目标的grid), 所有loss均使用均方误差. 另外, 对位置loss给予更高的权重以平衡位置loss和类别loss的占比, 对h和w开根号降低大bbox对位置偏差的敏感度.
 
-### **SSD **
+### ** SSD **
 **[Paper]** SSD: Single Shot MultiBox Detector  <Br>
 **[Year]** ECCV 2016 Oral <Br>
 **[Authors]**   	[Wei Liu](http://www.cs.unc.edu/~wliu/), [Dragomir Anguelov](), [Christian Szegedy](https://research.google.com/pubs/ChristianSzegedy.html), [Scott Reed](http://www.scottreed.info/), [Cheng-Yang Fu](http://www.cs.unc.edu/~cyfu/), [Alexander C. Berg](http://acberg.com/). <Br>
