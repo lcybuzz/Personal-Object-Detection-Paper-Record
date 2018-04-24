@@ -67,6 +67,10 @@
 	https://github.com/weiliu89/caffe/tree/ssd  <Br>
 	https://github.com/balancap/SSD-Tensorflow  <Br>
 **[Description]** <Br>
+1) 感觉是YOLO和RPN的结合版, 又快又好型
+2) 将feature map划分成网格, 在default box上预测bounding box相对于default boxes的offset和每一类的score, 在后几个卷积层上进行划分和bbox预测，以实现多尺度检测, 用卷积代替YOLO的全连接.
+3) 与YOLO相比, 共同点是直接将feature划分成网格, 并在default box上检测; 区别是: 1.使用了更多ratio和scale, 2.为每个得出的bbox分别预测每类的score而不是将检测object和分类分别进行,提高了精度; 3.用小kernel卷积代替了全连接层
+4) 与RPN相比, 共同点是都定义了一系列anchor, 区别是: 1.初始框是预先划分好的网格而不是sliding window搜索的; 2. 在多个层的feature map上检测以实现multi-scale, 而不是在最后的feature map上定义多个尺度的anchor box
 
 ## Other Interesting Methods  
 
