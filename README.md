@@ -59,6 +59,23 @@
 2) 将图像分为S*S个gird, 其作用类似于region proposal. 首先, 对于每个grid计算B个bounding box, 得到x, y, h, w以及confidence score, 此处confidence score是由bbox与真值的IoU和该grid存在目标的可能性之积组成的. 其次, 计算grid属于每个类别的概率, 通过bbox置信度类别概率相乘可得到bbox属于某一类的可能性;
 3) loss设计: 位置loss(只考虑负责该目标的bbox), 置信度loss(负责目标的bbox和不包含目标的bbox的加权和), 分类 loss(只考虑出现了目标的grid), 所有loss均使用均方误差. 另外, 对位置loss给予更高的权重以平衡位置loss和类别loss的占比, 对h和w开根号降低大bbox对位置偏差的敏感度.
 
+### **YOLO9000 ★★**
+**[Paper]** YOLO9000: Better,Faster,Stronger  <Br>
+**[Year]** CVPR 2017<Br>
+**[Authors]**   [Joseph Redmon](https://pjreddie.com/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/)  <Br>
+**[Pages]** <Br>
+	http://pjreddie.com/yolo9000/  <Br>
+	https://github.com/philipperemy/yolo-9000  <Br>
+	https://github.com/allanzelener/YAD2K <Br>
+	https://github.com/hizhangp/yolo_tensorflow <Br>
+	https://github.com/longcw/yolo2-pytorch <Br>
+**[Description]** <Br>
+1) YOLO的改进版本, 参考了SSD及Faster RCNN, 达到了更快更强的检测效果;
+2) 卷积代替全连接层. 考虑到物体尤其是大目标倾向于出现在图像中间, 因此将网络输入从448改到416, 使得最后生成13*3的feature map, 这样就有一正中央的grid去预测物体位置;
+3) 2个Bounding box改为Faster RCNN中的Anchor box. 然而此处的bbox不是预定义的, 而是用K-Means聚类出来的五个不同大小比例的bbox, 此处聚类距离用的是1-IoU以消除bbox大小对结果产生的影响;
+4) 多尺度. 与SSD在多层的feature map上预测不同, 本文的做法是将26*26的feature map空间相邻元素concat起来, 即从26*26*512 -> 13*13*2048, 然后和下一层的map合并到一起. 另外, 在训练时不固定输入的尺寸, 而每隔10个batch改变输入的大小
+	
+
 ### **SSD ★★★**
 **[Paper]** SSD: Single Shot MultiBox Detector  <Br>
 **[Year]** ECCV 2016 Oral <Br>
