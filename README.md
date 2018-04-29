@@ -74,7 +74,15 @@
 2) 卷积代替全连接层. 考虑到物体尤其是大目标倾向于出现在图像中间, 因此将网络输入从448改到416, 使得最后生成13*3的feature map, 这样就有一正中央的grid去预测物体位置;
 3) 2个Bounding box改为Faster RCNN中的Anchor box. 然而此处的bbox不是预定义的, 而是用K-Means聚类出来的五个不同大小比例的bbox, 此处聚类距离用的是1-IoU以消除bbox大小对结果产生的影响;
 4) 多尺度. 与SSD在多层的feature map上预测不同, 本文的做法是将26*26的feature map空间相邻元素concat起来, 即从26*26*512 -> 13*13*2048, 然后和下一层的map合并到一起. 另外, 在训练时不固定输入的尺寸, 而每隔10个batch改变输入的大小
-	
+
+### **YOLOv3 ★☆**
+**[Paper]** YOLO9000: Better,Faster,Stronger  <Br>
+**[Year]** arXiv 1804 <Br>
+**[Authors]**   [Joseph Redmon](https://pjreddie.com/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/)  <Br>
+**[Pages]** <Br>
+	https://pjreddie.com/darknet/yolo/ <Br>
+**[Description]** <Br>
+1) 粗读, 对前两个版本做了一些细节上的改进. 主要是多尺度预测和更好的backbone <Br>
 
 ### **SSD ★★★**
 **[Paper]** SSD: Single Shot MultiBox Detector  <Br>
