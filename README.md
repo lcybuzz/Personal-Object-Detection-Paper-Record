@@ -13,29 +13,34 @@
 # Deep Learning Methods
 ## Popular methods
 
-### **SPPNet**
+### **SPPNet ★★**
 **[Paper]** Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition <Br>
 **[Year]** ECCV 2014 / TPAMI 2015 <Br>
 **[Authors]** 	[Kaiming He](http://kaiminghe.com/), [Xiangyu Zhang](https://www.cs.purdue.edu/homes/xyzhang/),[Shaoqing Ren](http://shaoqingren.com/), [Jian Sun](http://www.jiansun.org/)  <Br>
 **[Pages]** https://github.com/ShaoqingRen/SPP_net  <Br>
 **[Description]** <Br>
+1) 提出了空间金字塔池化, 可以把任意尺寸的特征图pool成n*n大小. 设置不同的n, 即可得到不同尺度的feature, 形成金字塔. <Br>
+2) SPP使网络支持任意大小的输入, 另外多尺度的特征使网络的性能有了显著提升. 后面的ROI pooling应该也是受了这个的启发. <Br>
 
-### **R-CNN**
+### **R-CNN ★★★**
 **[Paper]** Rich feature hierarchies for accurate object detection and semantic segmentation <Br>
 **[Year]** CVPR 2014 <Br>
 **[Authors]** 		[Ross Girshick](http://www.rossgirshick.info/), [Jeff Donahue](http://jeffdonahue.com/),	[Trevor Darrell](http://people.eecs.berkeley.edu/~trevor/), [Jitendra Malik](http://people.eecs.berkeley.edu/~malik/)   <Br>
 **[Pages]** https://github.com/rbgirshick/rcnn  <Br>
 **[Description]** <Br>
+1) DL用于目标检测的首创. 用Selective Search产生约2k个proposal, 送入CNN得到类别和bounding box的位置调整. <Br>
+2) RCNN需对每个proposal进行CNN特征提取, 速度慢. 
 
-### **Fast R-CNN**
+### **Fast R-CNN ★★**
 **[Paper]** Fast R-CNN: Fast Region-based Convolutional Networks for object detection  <Br>
 **[Year]** ICCV 2015 <Br>
 **[Authors]** 		[Ross Girshick](http://www.rossgirshick.info/) <Br>
 **[Pages]** https://github.com/rbgirshick/fast-rcnn  <Br>
 **[Description]** <Br>
+1) 提出ROI pooling. 对Selective Search后的proposal直接映射到feature map对应位置, 并用ROI pooling将每个proposal对应的特征区域resize到固定大小, 送入后面的全连接层得到类别和位置调整. 此处FC层使用了SVD分解提速. <Br>
 
 
-### **Faster R-CNN**
+### **Faster R-CNN ★★★**
 **[Paper]** Fast R-CNN: Fast Region-based Convolutional Networks for object detection  <Br>
 **[Year]** ICCV 2015 <Br>
 **[Authors]**   	[Shaoqing Ren](http://shaoqingren.com/), [Kaiming He](http://kaiminghe.com/), [Ross Girshick](http://www.rossgirshick.info/), 	[Jian Sun](http://www.jiansun.org/)  <Br>
@@ -43,6 +48,12 @@
 	https://github.com/rbgirshick/py-faster-rcnn  <Br>
 	https://github.com/ShaoqingRen/faster_rcnn  <Br>
 **[Description]** <Br>
+1) 终于将提取Proposal, 特征提取和分类位置精修三个部分融合到一起. 提出了Region Proposal Network用于提取Proposal. <Br>
+2) RPN事先定义了9个Anchor box， 用于处理不同尺寸和横纵比的目标. Loss包括分类(判断该anchor box是否包含目标)和回归(位置调整)两部分. <Br>
+3) RPN得到Proposal后, 与Fast R-CNN步骤类似, 也通过ROI pooling将特征resize到固定大小并完成后续的分类及回归操作. <Br>
+4) 训练时采用了交替训练RPN和Fast R-CNN的策略. 代码有时间应该仔细阅读. <Br>
+**[Reference]** <Br>	
+https://www.cnblogs.com/zf-blog/p/7273182.html <Br>
 
 ## One Stage
 ### **YOLO ★★★**
