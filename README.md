@@ -2,7 +2,7 @@
 # Under construction!
 # Table of Contents
 - [Deep Learning Methods](#deep-learning-methods)
-  - [Popular methods](#popular-methods) <Br>
+  - [Popular methods](#popular-methods)
     - [SPPNet](#spp-net)
   - [One Stage](#one-stage)
   - [Other Interesting Methods](#other-interesting-methods)
