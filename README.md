@@ -3,7 +3,7 @@
 # Table of Contents
 - [Deep Learning Methods](#deep-learning-methods)
   - [Popular methods](#popular-methods) <Br>
-    - [SPPNet](#spp-net)
+    - [**SPPNet ★★**](#spp-net)
   - [One Stage](#one-stage)
   - [Other Interesting Methods](#other-interesting-methods)
 - [Taditional Classical Methods](#traditional-classical-methods)
