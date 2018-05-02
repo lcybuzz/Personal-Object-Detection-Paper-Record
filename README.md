@@ -3,7 +3,6 @@
 # Table of Contents
 - [Deep Learning Methods](#deep-learning-methods)
   - [Popular methods](#popular-methods)
-    - [R-CNN](#sppnet)
   - [One Stage](#one-stage)
   - [Other Interesting Methods](#other-interesting-methods)
 - [Taditional Classical Methods](#traditional-classical-methods)
