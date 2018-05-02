@@ -3,7 +3,7 @@
 # Table of Contents
 - [Deep Learning Methods](#deep-learning-methods)
   - [Popular methods](#popular-methods) <Br>
-    - [**SPPNet ★★**](#spp-net)
+    - [SPPNet](#spp-net)
   - [One Stage](#one-stage)
   - [Other Interesting Methods](#other-interesting-methods)
 - [Taditional Classical Methods](#traditional-classical-methods)
@@ -14,7 +14,7 @@
 # Deep Learning Methods
 ## Popular methods
 
-### **SPPNet ★★**
+### ** SPPNet ★★**
 **[Paper]** Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition <Br>
 **[Year]** ECCV 2014 / TPAMI 2015 <Br>
 **[Authors]** 	[Kaiming He](http://kaiminghe.com/), [Xiangyu Zhang](https://www.cs.purdue.edu/homes/xyzhang/),[Shaoqing Ren](http://shaoqingren.com/), [Jian Sun](http://www.jiansun.org/)  <Br>
