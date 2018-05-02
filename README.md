@@ -55,6 +55,16 @@
 **[Reference]** <Br>	
 https://www.cnblogs.com/zf-blog/p/7273182.html <Br>
 
+### **R-FCN**
+**[Paper]**   R-FCN:Object Detection via Region-based Fully Convolutional Networks <Br>
+**[Year]** NIPS 2016 <Br>
+**[Authors]** 	[Jifeng Dai](http://www.jifengdai.org/), [Yi Li](https://liyi14.github.io/), [Kaiming He](http://kaiminghe.com/), [Jian Sun](http://www.jiansun.org/) <Br> 
+**[Pages]**  https://github.com/daijifeng001/R-FCN  <Br>
+**[Description]** <Br>
+1) 从提高检测和分类共享计算出发, 提出了一种基于position-sensitive score map的目标检测方法, 权衡在图像分类中的平移不变性和在物体检测中的平移变换性这样一种两难境地. 在速度和性能上取得了不错的平衡. <Br>
+2) 经过CNN特征提取(ResNet-101)得到feature map, 此feature map分别作为RPN和位置敏感分类两支的输入. 分类一支生成K*K*(C+1)个channel的feature map， K*K个节点分别对应K*K网格的不同位置, 如K=3时分别代表某个类别左上至右下9个位置对应的score, 这样输出就encode了各类别的相对位置信息. 将RPN得到的ROI进行position-sensitive ROI pooling, 得到K*K个ROI的得分网格, 再对这一网格进行投票即可得到该ROI的类别. <Br>
+3) R-FCN不存在Faster R-CNN中那样的region-wise layers, 速度大大提升, 且性能很好. 至于其中的道理嘛... 之后可仔细阅读论文和代码. <Br>
+
 ## One Stage
 ### **YOLO ★★★**
 **[Paper]** Fast R-CNN: Fast Region-based Convolutional Networks for object detection  <Br>
