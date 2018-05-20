@@ -13,7 +13,7 @@
 # Deep Learning Methods
 ## Popular methods
 
-### ** SPPNet ★★**
+### **SPPNet ★★**
 **[Paper]** Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition <Br>
 **[Year]** ECCV 2014 / TPAMI 2015 <Br>
 **[Authors]** 	[Kaiming He](http://kaiminghe.com/), [Xiangyu Zhang](https://www.cs.purdue.edu/homes/xyzhang/),[Shaoqing Ren](http://shaoqingren.com/), [Jian Sun](http://www.jiansun.org/)  <Br>
@@ -52,6 +52,7 @@
 2) RPN事先定义了9个Anchor box， 用于处理不同尺寸和横纵比的目标. Loss包括分类(判断该anchor box是否包含目标)和回归(位置调整)两部分. <Br>
 3) RPN得到Proposal后, 与Fast R-CNN步骤类似, 也通过ROI pooling将特征resize到固定大小并完成后续的分类及回归操作. <Br>
 4) 训练时采用了交替训练RPN和Fast R-CNN的策略. 代码有时间应该仔细阅读. <Br>
+	
 **[Reference]** <Br>	
 https://www.cnblogs.com/zf-blog/p/7273182.html <Br>
 
