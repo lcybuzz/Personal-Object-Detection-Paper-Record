@@ -66,6 +66,19 @@ https://www.cnblogs.com/zf-blog/p/7273182.html <Br>
 2) 经过CNN特征提取(ResNet-101)得到feature map, 此feature map分别作为RPN和位置敏感分类两支的输入. 分类一支生成K*K*(C+1)个channel的feature map， K*K个节点分别对应K*K网格的不同位置, 如K=3时分别代表某个类别左上至右下9个位置对应的score, 这样输出就encode了各类别的相对位置信息. 将RPN得到的ROI进行position-sensitive ROI pooling, 得到K*K个ROI的得分网格, 再对这一网格进行投票即可得到该ROI的类别. <Br>
 3) R-FCN不存在Faster R-CNN中那样的region-wise layers, 速度大大提升, 且性能很好. 至于其中的道理嘛... 之后可仔细阅读论文和代码. <Br>
 
+### **FPN ★★**
+**[Paper]**  Feature Pyramid Networks for Object Detection <Br>
+**[Year]** NIPS 2016 <Br>
+**[Authors]** 	[Tsung-Yi Lin](https://vision.cornell.edu/se3/people/tsung-yi-lin/), [Piotr Doll´ar](http://pdollar.github.io/), [Ross Girshick](http://www.rossgirshick.info/), [Kaiming He](http://kaiminghe.com/), [Bharath Hariharan](http://home.bharathh.info/), [Serge Belongie](http://blogs.cornell.edu/techfaculty/serge-belongie/) <Br> 
+**[Pages]**    <Br>
+**[Description]** <Br>
+1) 仿照SSD设计了多尺度特征融合金字塔, 在应用多尺度信息提升精度(特别是小目标精度)的同时, 保证了一定的速度. FPN是一种通用的feature extractor, 可用于目标检测的许多地方. <Br>
+2) FPN结构类似于U-Net, 分为bottom-up和top-down两步, top-down的每个stage用前一阶段的特征和对应的bottom-up特征融合而成, 每个stage融合后的特征都用于预测, 以检测不同scale的目标. <Br>
+
+**[Reference]**
+https://blog.csdn.net/u014380165/article/details/72890275 <Br>
+https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
+
 ## One Stage
 ### **YOLO ★★★**
 **[Paper]** Fast R-CNN: Fast Region-based Convolutional Networks for object detection  <Br>
