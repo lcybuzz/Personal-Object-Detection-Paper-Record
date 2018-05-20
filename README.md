@@ -75,7 +75,7 @@ https://www.cnblogs.com/zf-blog/p/7273182.html <Br>
 1) 仿照SSD设计了多尺度特征融合金字塔, 在应用多尺度信息提升精度(特别是小目标精度)的同时, 保证了一定的速度. FPN是一种通用的feature extractor, 可用于目标检测的许多地方. <Br>
 2) FPN结构类似于U-Net, 分为bottom-up和top-down两步, top-down的每个stage用前一阶段的特征和对应的bottom-up特征融合而成, 每个stage融合后的特征都用于预测, 以检测不同scale的目标. <Br>
 
-**[Reference]**
+**[Reference]**  <Br>
 https://blog.csdn.net/u014380165/article/details/72890275 <Br>
 https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 
