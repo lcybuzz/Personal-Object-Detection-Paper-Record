@@ -79,6 +79,70 @@ https://www.cnblogs.com/zf-blog/p/7273182.html <Br>
 https://blog.csdn.net/u014380165/article/details/72890275 <Br>
 https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 
+### **Soft-NMS**
+**[Paper]**  Soft-NMS -- Improving Object Detection With One Line of Code <Br>
+**[Year]** ICCV 2017<Br>
+**[Authors]** Navaneeth Bodla, [Bharat Singh](https://bharatsingh.net/), [Rama Chellappa](http://users.umiacs.umd.edu/~rama/), [Larry S. Davis](http://users.umiacs.umd.edu/~lsd/)<Br> 
+**[Pages]** https://github.com/bharatsingh430/soft-nms   <Br>
+**[Description]** <Br>
+
+### **Relation Networks**
+**[Paper]** Relation Networks for Object Detection <Br>
+**[Year]** CVPR 2018 Oral<Br>
+**[Authors]** [Han Hu], [Jiayuan Gu](https://sites.google.com/eng.ucsd.edu/jiayuan-gu), Zheng Zhang, [Jifeng Dai](http://www.jifengdai.org/), Yichen Wei <Br> 
+**[Pages]** https://github.com/msracver/Relation-Networks-for-Object-Detection   <Br>
+**[Description]** <Br>
+
+### **R-FCN-3000**
+**[Paper]**  R-FCN-3000 at 30fps: Decoupling Detection and Classification <Br>
+**[Year]** CVPR 2018<Br>
+**[Authors]** [Bharat Singh](https://bharatsingh.net/), Hengduo Li, [Abhishek Sharma](https://scholar.google.com/citations?user=18fTep8AAAAJ&hl=en&oi=sra), [Larry S. Davis](http://users.umiacs.umd.edu/~lsd/) <Br> 
+**[Pages]** https://github.com/mahyarnajibi/SNIPER/tree/cvpr3k   <Br>
+**[Description]** <Br>
+
+### **SNIP**
+**[Paper]**  An analysis of scale invariance in object detection-snip <Br>
+**[Year]** CVPR 2018 Oral<Br>
+**[Authors]** [Bharat Singh](https://bharatsingh.net/), [Larry S. Davis](http://users.umiacs.umd.edu/~lsd/) <Br> 
+**[Pages]** https://github.com/mahyarnajibi/SNIPER   <Br>
+**[Description]** <Br>
+
+### **SNIPER**
+**[Paper]**  SNIPER: Efficient Multi-Scale Training <Br>
+**[Year]** NIPS 2018 <Br>
+**[Authors]** [Bharat Singh](https://bharatsingh.net/),[Mahyar Najibi](http://users.umiacs.umd.edu/~najibi/), [Larry S. Davis](http://users.umiacs.umd.edu/~lsd/) <Br> 
+**[Pages]** https://github.com/mahyarnajibi/SNIPER   <Br>
+**[Description]** <Br>
+
+### **Cascade R-CNN**
+**[Paper]**  Cascade R-CNN: Delving into High Quality Object Detection <Br>
+**[Year]** CVPR 2018 <Br>
+**[Authors]** [Zhaowei Cai](https://sites.google.com/site/zhaoweicai1989/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/~nuno/) <Br> 
+**[Pages]** https://github.com/zhaoweicai/cascade-rcnn   <Br>
+**[Description]** <Br>
+
+### **RefineDet**
+**[Paper]** Single-Shot Refinement Neural Network for Object Detection <Br>
+**[Year]** CVPR 2018 <Br>
+**[Authors]**  [Shifeng Zhang](http://www.cbsr.ia.ac.cn/users/sfzhang/), [Longyin Wen](http://www.cbsr.ia.ac.cn/users/lywen/), [Xiao Bian](https://sites.google.com/site/cvbian/), [Zhen Lei](http://www.cbsr.ia.ac.cn/users/zlei/), [Stan Z. Li](http://www.cbsr.ia.ac.cn/users/szli/) <Br> 
+**[Pages]** https://github.com/sfzhang15/RefineDet  <Br>
+**[Description]** <Br>
+
+### **CornerNet**
+**[Paper]**  CornerNet: Detecting Objects as Paired Keypoints <Br>
+**[Year]** ECCV 2018 <Br>
+**[Authors]** [Hei Law](https://heilaw.github.io/), [Jia Deng](https://www.cs.princeton.edu/~jiadeng/) <Br> 
+**[Pages]** https://github.com/umich-vl/CornerNet   <Br>
+**[Description]** <Br>
+
+### **IoUNet**
+**[Paper]**  Acquisition of Localization Confidence for Accurate Object Detection<Br>
+**[Year]** ECCV 2018 Oral<Br>
+**[Authors]** Borui Jiang, Ruixuan Luo, [Jiayuan Mao](http://vccy.xyz/), [Tete Xiao](http://tetexiao.com/), [Yuning Jiang](https://yuningjiang.github.io/)  <Br> 
+**[Pages]** https://github.com/vacancy/PreciseRoIPooling  (Uncomplete) <Br>
+**[Description]** <Br>
+
+
 ## One Stage
 ### **YOLO ★★★**
 **[Paper]** Fast R-CNN: Fast Region-based Convolutional Networks for object detection  <Br>
