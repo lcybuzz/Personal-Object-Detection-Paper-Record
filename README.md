@@ -208,14 +208,14 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 3) 与YOLO相比, 共同点是直接将feature划分成网格, 并在default box上检测; 区别是: 1.使用了更多ratio和scale, 2.为每个得出的bbox分别预测每类的score而不是将检测object和分类分别进行,提高了精度; 3.用小kernel卷积代替了全连接层
 4) 与RPN相比, 共同点是都定义了一系列anchor, 区别是: 1.初始框是预先划分好的网格而不是sliding window搜索的; 2. 在多个层的feature map上检测以实现multi-scale, 而不是在最后的feature map上定义多个尺度的anchor box
 
-### **Focal Loss****
+### **Focal Loss**
 **[Paper]** Focal Loss for Dense Object Detection <Br>
 **[Year]** ICCV 2017 Oral<Br>
 **[Authors]** [Tsung-Yi Lin](https://vision.cornell.edu/se3/people/tsung-yi-lin/), [Priya Goyal](https://scholar.google.com/citations?user=-9yiQMsAAAAJ&hl=en&oi=ao), [Ross Girshick](http://www.rossgirshick.info/), [Kaiming He](http://kaiminghe.com/), [Piotr Dollar](https://pdollar.github.io/) <Br> 
 **[Pages]**    <Br>
 **[Description]** <Br>
 
-### **CornerNet ★★****
+### **CornerNet ★★**
 **[Paper]**  CornerNet: Detecting Objects as Paired Keypoints <Br>
 **[Year]** ECCV 2018 Oral<Br>
 **[Authors]** [Hei Law](https://heilaw.github.io/), [Jia Deng](https://www.cs.princeton.edu/~jiadeng/) <Br> 
