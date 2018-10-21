@@ -2,7 +2,7 @@
 # Under construction!
 # Table of Contents
 - [Deep Learning Methods](#deep-learning-methods)
-  - [Popular methods](#popular-methods)
+  - [Two Stages](#two-stages)
   - [One Stage](#one-stage)
   - [Other Interesting Methods](#other-interesting-methods)
 - [Taditional Classical Methods](#traditional-classical-methods)
@@ -10,8 +10,19 @@
 - [Leaderboards](#leaderboards)
 - [Sources-Lists](#sources-lists)
 
+# Rank
+- Semantic Segmentation<Br>
+- ★★★ <Br>
+	**[R-CNN]**, **[Faster R-CNN]**, **[YOLO]**, **[SSD]** <Br>
+- ★★  <Br>
+	**[SPPNet]**, **[Fast R-CNN]**, **[R-FCN]**, **[RPN]**, **[YOLOv3]**, **[CornerNet]** <Br>
+- ★  <Br>
+	**[YOLO9000]**<Br>
+- ♥  <Br>
+<Br>
+	
 # Deep Learning Methods
-## Popular methods
+## Two Stages
 
 ### **SPPNet ★★**
 **[Paper]** Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition <Br>
@@ -85,6 +96,13 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 **[Authors]** Navaneeth Bodla, [Bharat Singh](https://bharatsingh.net/), [Rama Chellappa](http://users.umiacs.umd.edu/~rama/), [Larry S. Davis](http://users.umiacs.umd.edu/~lsd/)<Br> 
 **[Pages]** https://github.com/bharatsingh430/soft-nms   <Br>
 **[Description]** <Br>
+	
+### **CoupleNet**
+**[Paper]**  CoupleNet: Coupling Global Structure with Local Parts for Object Detection <Br>
+**[Year]** ICCV 2017<Br>
+**[Authors]** Yousong Zhu, Chaoyang Zhao, Jinqiao Wang, Xu Zhao, Yi Wu, Hanqing Lu <Br> 
+**[Pages]** https://github.com/tshizys/CoupleNet   <Br>
+**[Description]** <Br>
 
 ### **Relation Networks**
 **[Paper]** Relation Networks for Object Detection <Br>
@@ -128,12 +146,6 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 **[Pages]** https://github.com/sfzhang15/RefineDet  <Br>
 **[Description]** <Br>
 
-### **CornerNet**
-**[Paper]**  CornerNet: Detecting Objects as Paired Keypoints <Br>
-**[Year]** ECCV 2018 <Br>
-**[Authors]** [Hei Law](https://heilaw.github.io/), [Jia Deng](https://www.cs.princeton.edu/~jiadeng/) <Br> 
-**[Pages]** https://github.com/umich-vl/CornerNet   <Br>
-**[Description]** <Br>
 
 ### **IoUNet**
 **[Paper]**  Acquisition of Localization Confidence for Accurate Object Detection<Br>
@@ -158,7 +170,7 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 2) 将图像分为S*S个gird, 其作用类似于region proposal. 首先, 对于每个grid计算B个bounding box, 得到x, y, h, w以及confidence score, 此处confidence score是由bbox与真值的IoU和该grid存在目标的可能性之积组成的. 其次, 计算grid属于每个类别的概率, 通过bbox置信度类别概率相乘可得到bbox属于某一类的可能性;
 3) loss设计: 位置loss(只考虑负责该目标的bbox), 置信度loss(负责目标的bbox和不包含目标的bbox的加权和), 分类 loss(只考虑出现了目标的grid), 所有loss均使用均方误差. 另外, 对位置loss给予更高的权重以平衡位置loss和类别loss的占比, 对h和w开根号降低大bbox对位置偏差的敏感度.
 
-### **YOLO9000 ★★**
+### **YOLO9000 ★☆**
 **[Paper]** YOLO9000: Better,Faster,Stronger  <Br>
 **[Year]** CVPR 2017<Br>
 **[Authors]**   [Joseph Redmon](https://pjreddie.com/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/)  <Br>
@@ -174,7 +186,7 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 3) 2个Bounding box改为Faster RCNN中的Anchor box. 然而此处的bbox不是预定义的, 而是用K-Means聚类出来的五个不同大小比例的bbox, 此处聚类距离用的是1-IoU以消除bbox大小对结果产生的影响;
 4) 多尺度. 与SSD在多层的feature map上预测不同, 本文的做法是将26*26的feature map空间相邻元素concat起来, 即从26*26*512 -> 13*13*2048, 然后和下一层的map合并到一起. 另外, 在训练时不固定输入的尺寸, 而每隔10个batch改变输入的大小
 
-### **YOLOv3 ★☆**
+### **YOLOv3 ★★**
 **[Paper]** YOLO9000: Better,Faster,Stronger  <Br>
 **[Year]** arXiv 1804 <Br>
 **[Authors]**   [Joseph Redmon](https://pjreddie.com/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/)  <Br>
@@ -196,6 +208,23 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 3) 与YOLO相比, 共同点是直接将feature划分成网格, 并在default box上检测; 区别是: 1.使用了更多ratio和scale, 2.为每个得出的bbox分别预测每类的score而不是将检测object和分类分别进行,提高了精度; 3.用小kernel卷积代替了全连接层
 4) 与RPN相比, 共同点是都定义了一系列anchor, 区别是: 1.初始框是预先划分好的网格而不是sliding window搜索的; 2. 在多个层的feature map上检测以实现multi-scale, 而不是在最后的feature map上定义多个尺度的anchor box
 
+### **Focal Loss****
+**[Paper]** Focal Loss for Dense Object Detection <Br>
+**[Year]** ICCV 2017 Oral<Br>
+**[Authors]** [Tsung-Yi Lin](https://vision.cornell.edu/se3/people/tsung-yi-lin/), [Priya Goyal](https://scholar.google.com/citations?user=-9yiQMsAAAAJ&hl=en&oi=ao), [Ross Girshick](http://www.rossgirshick.info/), [Kaiming He](http://kaiminghe.com/), [Piotr Dollar](https://pdollar.github.io/) <Br> 
+**[Pages]**    <Br>
+**[Description]** <Br>
+
+### **CornerNet ★★****
+**[Paper]**  CornerNet: Detecting Objects as Paired Keypoints <Br>
+**[Year]** ECCV 2018 Oral<Br>
+**[Authors]** [Hei Law](https://heilaw.github.io/), [Jia Deng](https://www.cs.princeton.edu/~jiadeng/) <Br> 
+**[Pages]** https://github.com/umich-vl/CornerNet   <Br>
+**[Description]** <Br>
+1) 与一般的以目标为中心预测bounding box的思路不同, 提出了预测top-left和bottom-right角点进而得到目标框的目的. 该方法分别计算左上和右下角点的heatmap和embedding, 最后根据embedding向量的距离找到同一目标对应的一对top-left和bottom-right角点. 整体做法与人体关节点检测颇有相似之处. <Br>
+2) 提出了corner pooling, 目的时更好地捕获水平和竖直方向的信息???(**corner pooling的道理还不太理解**), 经过corner pooling后, 分别得到heatmaap, embedding和offset. offset是为了修正下采样过程中造成的位置偏移. embedding是为了将同一目标的两个角点group起来设置的, 设计了push和pull两个loss, 目的是使不同目标角点的embedding距离大, 同一目标角点的embedding小. 在计算loss时, 以focal loss为基础, 根据预测值与真值距离的大小使用不同权重<Br>
+3) 性能上超过了现有的one stage方法, 与two stage的方法差距不大. 不过还没测过运行速度怎样.<Br>
+
 ## Other Interesting Methods  
 
 
@@ -207,6 +236,7 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 # Leaderboards
  PASCAL VOC http://host.robots.ox.ac.uk:8080/leaderboard/main_bootstrap.php <Br>
   ILSVRC2016 http://image-net.org/challenges/LSVRC/2016/results <Br>
+MSCOCO http://cocodataset.org/#detection-leaderboard <Br>
 # Sources-Lists
 https://handong1587.github.io/deep_learning/2015/10/09/object-detection.html <Br>
 
