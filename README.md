@@ -118,6 +118,13 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 **[Pages]** https://github.com/mahyarnajibi/SNIPER/tree/cvpr3k   <Br>
 **[Description]** <Br>
 
+### **MegDet**
+**[Paper]**  MegDet: A Large Mini-Batch Object Detector <Br>
+**[Year]** CVPR 2018<Br>
+**[Authors]** [Chao Peng](http://www.pengchao.org/), [Tete Xiao](http://tetexiao.com/), [Zeming Li](http://www.zemingli.com/), [Yuning Jiang](https://yuningjiang.github.io/), [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en), Kai Jia, [Gang Yu](http://www.skicyyu.org/), [Jian Sun](http://www.jiansun.org/) <Br> 
+**[Pages]** https://github.com/mahyarnajibi/SNIPER/tree/cvpr3k   <Br>
+**[Description]** <Br>
+
 ### **SNIP**
 **[Paper]**  An analysis of scale invariance in object detection-snip <Br>
 **[Year]** CVPR 2018 Oral<Br>
