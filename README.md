@@ -12,13 +12,13 @@
 
 # Rank
 - Semantic Segmentation<Br>
-- ★★★ <Br>
-	**[R-CNN]**, **[Faster R-CNN]**, **[YOLO]**, **[SSD]** <Br>
-- ★★  <Br>
-	**[SPPNet]**, **[Fast R-CNN]**, **[R-FCN]**, **[RPN]**, **[YOLOv3]**, **[CornerNet]** <Br>
-- ★  <Br>
-	**[YOLO9000]**, **[CenterNet]** <Br>
-- ♥  <Br>
+	- ★★★ <Br>
+		**[R-CNN]**, **[Faster R-CNN]**, **[YOLO]**, **[SSD]** <Br>
+	- ★★  <Br>
+		**[SPPNet]**, **[Fast R-CNN]**, **[R-FCN]**, **[RPN]**, **[YOLOv3]**, **[CornerNet]** <Br>
+	- ★  <Br>
+		**[YOLO9000]**, **[CenterNet]** <Br>
+	- ♥  <Br>
 <Br>
 	
 # Deep Learning Methods
