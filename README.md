@@ -17,7 +17,7 @@
 - ★★  <Br>
 	**[SPPNet]**, **[Fast R-CNN]**, **[R-FCN]**, **[RPN]**, **[YOLOv3]**, **[CornerNet]** <Br>
 - ★  <Br>
-	**[YOLO9000]**<Br>
+	**[YOLO9000]**, **[CenterNet]** <Br>
 - ♥  <Br>
 <Br>
 	
@@ -232,6 +232,16 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 2) 提出了corner pooling, 目的时更好地捕获水平和竖直方向的信息???(**corner pooling的道理还不太理解**), 经过corner pooling后, 分别得到heatmaap, embedding和offset. offset是为了修正下采样过程中造成的位置偏移. embedding是为了将同一目标的两个角点group起来设置的, 设计了push和pull两个loss, 目的是使不同目标角点的embedding距离大, 同一目标角点的embedding小. 在计算loss时, 以focal loss为基础, 根据预测值与真值距离的大小使用不同权重<Br>
 3) 性能上超过了现有的one stage方法, 与two stage的方法差距不大. 不过还没测过运行速度怎样.<Br>
 
+
+### **CenterNet ★☆**
+**[Paper]**  CenterNet :Objects as Points <Br>
+**[Year]** arXiv 2019<Br>
+**[Authors]** [Xingyi Zhou](http://xingyizhou.xyz/), [Dequan Wang](https://dequan.wang/), [Philipp Krähenbühl](http://www.philkr.net/) <Br> 
+**[Pages]** https://github.com/xingyizhou/CenterNet   <Br>
+**[Description]** <Br>
+1) Anchor-free的目标检测算法, 使用基于heapmap的关键点检测方法检测目标的center point. 思路简洁, 可扩展到姿态估计, 3d目标检测等任务中, 在速度和性能上达到了很好的平衡. <Br>
+2) 模型分为三个分支, i>基于heapmap的中心点检测, 因为取得是每个位置的最大值, 所以能起到NMS的作用, 因此可省去非end-to-end的NMS部分; ii>不区分类别的offset分支修正降采样带来的error; iii>不区分类别的目标尺寸预测分支. 另外还可以加入其他分支做3d, 姿态估计等. <Br>
+	
 ## Other Interesting Methods  
 
 
