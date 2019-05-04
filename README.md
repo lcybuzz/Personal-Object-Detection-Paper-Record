@@ -235,7 +235,7 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 
 ### ** Objects as Points ★☆**
 **[Paper]**  CenterNet :Objects as Points <Br>
-**[Year]** arXiv 2019<Br>
+**[Year]** arXiv 1904<Br>
 **[Authors]** [Xingyi Zhou](http://xingyizhou.xyz/), [Dequan Wang](https://dequan.wang/), [Philipp Krähenbühl](http://www.philkr.net/) <Br> 
 **[Pages]** https://github.com/xingyizhou/CenterNet   <Br>
 **[Description]** <Br>
@@ -244,7 +244,7 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 
 ### ** Keypoint Triplets ★☆**
 **[Paper]**  CenterNet: Keypoint Triplets for Object Detection <Br>
-**[Year]** arXiv 2019<Br>
+**[Year]** arXiv 1904<Br>
 **[Authors]** Kaiwen Duan, [Song Bai](http://songbai.site/), [Lingxi Xie](http://lingxixie.com/Home.html), [Honggang Qi](http://people.ucas.ac.cn/~hgqi), [Qingming Huang](https://scholar.google.com/citations?user=J1vMnRgAAAAJ&hl=zh-CN), [Qi Tian](https://scholar.google.com/citations?user=61b6eYkAAAAJ&hl=zh-CN)<Br> 
 **[Pages]** https://github.com/Duankaiwen/CenterNet   <Br>
 **[Description]** <Br>
