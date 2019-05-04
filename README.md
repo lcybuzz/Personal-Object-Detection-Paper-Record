@@ -17,7 +17,7 @@
 	- ★★  <Br>
 		**[SPPNet]**, **[Fast R-CNN]**, **[R-FCN]**, **[RPN]**, **[YOLOv3]**, **[CornerNet]** <Br>
 	- ★  <Br>
-		**[YOLO9000]**, **[CenterNet]** <Br>
+		**[YOLO9000]**, **[Objects as Points]**, **[Keypoint Triplets]** <Br>
 	- ♥  <Br>
 <Br>
 	
@@ -228,12 +228,12 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 **[Authors]** [Hei Law](https://heilaw.github.io/), [Jia Deng](https://www.cs.princeton.edu/~jiadeng/) <Br> 
 **[Pages]** https://github.com/umich-vl/CornerNet   <Br>
 **[Description]** <Br>
-1) 与一般的以目标为中心预测bounding box的思路不同, 提出了预测top-left和bottom-right角点进而得到目标框的目的. 该方法分别计算左上和右下角点的heatmap和embedding, 最后根据embedding向量的距离找到同一目标对应的一对top-left和bottom-right角点. 整体做法与人体关节点检测颇有相似之处. <Br>
-2) 提出了corner pooling, 目的时更好地捕获水平和竖直方向的信息???(**corner pooling的道理还不太理解**), 经过corner pooling后, 分别得到heatmaap, embedding和offset. offset是为了修正下采样过程中造成的位置偏移. embedding是为了将同一目标的两个角点group起来设置的, 设计了push和pull两个loss, 目的是使不同目标角点的embedding距离大, 同一目标角点的embedding小. 在计算loss时, 以focal loss为基础, 根据预测值与真值距离的大小使用不同权重<Br>
+1) Anchor-free目标检测的代表性算法, 与一般的以目标为中心预测bounding box的思路不同, 提出了预测top-left和bottom-right角点进而得到目标框的目的. 该方法分别计算左上和右下角点的heatmap和embedding, 最后根据embedding向量的距离找到同一目标对应的一对top-left和bottom-right角点. 整体做法与人体关节点检测颇有相似之处. <Br>
+2) 提出了corner pooling, 目的是更好地捕获水平和竖直方向的信息, 经过corner pooling后, 分别得到heatmap, embedding和offset. offset是为了修正下采样过程中造成的位置偏移. embedding是为了将同一目标的两个角点group起来设置的, 设计了push和pull两个loss, 目的是使不同目标角点的embedding距离大, 同一目标角点的embedding小. 在计算loss时, 以focal loss为基础, 根据预测值与真值距离的大小使用不同权重<Br>
 3) 性能上超过了现有的one stage方法, 与two stage的方法差距不大. 不过还没测过运行速度怎样.<Br>
 
 
-### **CenterNet ★☆**
+### ** Objects as Points ★☆**
 **[Paper]**  CenterNet :Objects as Points <Br>
 **[Year]** arXiv 2019<Br>
 **[Authors]** [Xingyi Zhou](http://xingyizhou.xyz/), [Dequan Wang](https://dequan.wang/), [Philipp Krähenbühl](http://www.philkr.net/) <Br> 
@@ -241,6 +241,17 @@ https://blog.csdn.net/jesse_mx/article/details/54588085 <Br>
 **[Description]** <Br>
 1) Anchor-free的目标检测算法, 使用基于heapmap的关键点检测方法检测目标的center point. 思路简洁, 可扩展到姿态估计, 3d目标检测等任务中, 在速度和性能上达到了很好的平衡. <Br>
 2) 模型分为三个分支, i>基于heapmap的中心点检测, 因为取得是每个位置的最大值, 所以能起到NMS的作用, 因此可省去非end-to-end的NMS部分; ii>不区分类别的offset分支修正降采样带来的error; iii>不区分类别的目标尺寸预测分支. 另外还可以加入其他分支做3d, 姿态估计等. <Br>
+
+### ** Keypoint Triplets ★☆**
+**[Paper]**  CenterNet: Keypoint Triplets for Object Detection <Br>
+**[Year]** arXiv 2019<Br>
+**[Authors]** Kaiwen Duan, [Song Bai](http://songbai.site/), [Lingxi Xie](http://lingxixie.com/Home.html), [Honggang Qi](http://people.ucas.ac.cn/~hgqi), [Qingming Huang](https://scholar.google.com/citations?user=J1vMnRgAAAAJ&hl=zh-CN), [Qi Tian](https://scholar.google.com/citations?user=61b6eYkAAAAJ&hl=zh-CN)<Br> 
+**[Pages]** https://github.com/Duankaiwen/CenterNet   <Br>
+**[Description]** <Br>
+1) 基于CornerNet提出的改进, 明显提升了CornetNet的性能 <Br>
+2) 为了解决CornerNet的False Discovery问题, 提出了检测中心点, 推断时通过判断corner点围成的区域里是否有置信度高于一定阈值的中心点, 来判断是否保留该bounding box. <Br>
+3) 在corner pooling的基础上提出了center pooling和cascade corner pooling, 更好的挖掘信息. <Br>
+4) 实验及代码没研究 <Br>
 	
 ## Other Interesting Methods  
 
